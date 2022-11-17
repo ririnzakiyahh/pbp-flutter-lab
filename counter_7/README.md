@@ -1,3 +1,5 @@
+# TUGAS 7
+
 ## Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya.
 
 Stateless widget adalah adalah widget yang tidak akan pernah berubah. Stateless Widget  merupakan widget yang di-build hanya dengan konfigurasi yang telah diinisiasi sejak awal.Hal yang dimaksud tidak berubah adalah perubahan dalam variabel, icon, tombol atau pengambilan data tidak akan mengubah state dari aplikasi. Sehingga widget ini cocok untuk digunakan pada tampilan aplikasi yang bersifat statis.
@@ -31,3 +33,33 @@ setState() merupakan sebuah fungsi yang berguna untuk memberitahu widget bahwa a
 5. Bind decrement functionnya pada onPressed props di button decrement dan bind function increment pada onPressed props di button increment
 6. Membuat widget Text dan tambahkan handler ternary, ketika counter genap maka keluarkan Text Genap, else Text Ganjil
  
+
+# TUGAS 8
+
+## Jelaskan perbedaan `Navigator.push` dan `Navigator.pushReplacement`.
+`Navigator.push` merupakan sebuah navigator yang digunakan untuk menambahkan route baru ke stack navigasi. Sedangkan `Navigator.pushReplacement` merupakan sebuah navigator routing yang berguna untuk mengganti route yang ada di stack navigasi dengan route baru. 
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- Scaffold : Widget ini memiliki peran untuk mengatur struktur visual layout dengan mengimplementasikan material design
+- Drawer: widget yang berfungsi untuk membuat drawer di sisi kiri layar (untuk navigasi)
+- Container: widget yang berfungsi sebagai container untuk menampung widget lainnya
+- Column: widget yang berfungsi untuk menampung widget lainnya secara vertikal
+- TextFormField : Widget ini berfungsi sebagai form dari text
+- Center : Widget ini berfungsi untuk meletakkan widget didalamnya ke bagian tengah
+- TextButton -> membuat tombol berbasis text untuk trigger datepicker
+- Text : Widget ini berfungsi untuk menampilkan text pada aplikasi
+
+## Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+- onTap: event yang terjadi ketika widget di tap
+- onPressed: event yang terjadi ketika widget di tekan
+- onChanged: event yang terjadi ketika widget diubah
+- onSaved: event yang terjadi ketika widget disimpan
+
+## Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+Cara kerja method Navigator adalah dengan mengambil data-data routing dari pengguna dan mengolahnya dalam bentuk stack. Dikarenakan stack bersifat FIFO, maka data routing akan berganti sesuai dengan urutan FIFO, dan diolahnya dengan menggunakan Navigator.push dan Navigator.pop.
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Membuat file drawer yang akan menjadi navbar untuk semua page
+2. Membuat file tambah_budget untuk membuat form yang nantinya datanya bakal dimasukkin kedalam List yang ada di budget.
+3. Pada budget, dibuat fungsi untuk menambahkan object pada atribut classnya untuk menampung data yang diinput pada form
+4. Membuat file data_budget untuk menampilkan data. 
