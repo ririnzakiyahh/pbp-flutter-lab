@@ -63,3 +63,37 @@ Cara kerja method Navigator adalah dengan mengambil data-data routing dari pengg
 2. Membuat file tambah_budget untuk membuat form yang nantinya datanya bakal dimasukkin kedalam List yang ada di budget.
 3. Pada budget, dibuat fungsi untuk menambahkan object pada atribut classnya untuk menampung data yang diinput pada form
 4. Membuat file data_budget untuk menampilkan data. 
+
+
+# TUGAS 9
+
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Ya bisa. Pengambilan data JSON dengan membuat model bertujuan untuk meminimalisir kesalahan pengambilan atau pengiriman data melalui http request. Dengan membuat model, akan memudahkan dalam 
+pengaksesan data.
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- Scaffold : Widget ini memiliki peran untuk mengatur struktur visual layout dengan mengimplementasikan material design
+- Column: widget yang berfungsi untuk menampung widget lainnya secara vertikal
+- Text : Widget ini berfungsi untuk menampilkan text pada aplikasi
+- TextStyle : Widget ini berfungsi untuk memberikan styling pada text misalnya warna
+- ListView.builder : Widget ini berfungsi untuk menampilkan list of children yang scrollable
+- Container: widget yang berfungsi sebagai container untuk menampung widget lainnya
+- Row : Widget ini berfungsi untuk mengatur tata letak widget
+- Expanded : Widget ini berfungsi untuk memperluas anak dari Row, Column atau flex sehingga mengisi ruang yang tersedia
+- SizedBox : Widget ini berfungsi untuk membuat box, dimana box ini bisa digunakan untuk menambah jarak
+
+##  Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+1. Menambahkan dependency http ke proyek, dependency ini digunakan untuk bertukar data melalui HTTP request, seperti GET, POST, PUT, dan lain-lain.
+2. Membuat http request ke web service menggunakan dependency http.
+3. Mengkonversikan objek JSON ke Model Object.
+4. Menampilkan data yang telah dikonversi ke aplikasi dengan FutureBuilder.
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Membuat class `mywatchlist.dart` pada folder model. Class model ini akan digunakan untuk page mywatchlist dan akan menampung data JSON.
+2. Menambahkan tombol navigasi pada drawer untuk membuka halaman mywatchlist.
+3. Membuat method yang digunakan untuk melakukan fetch data dari website json tugas 3 dengan http, dimana method ini di refactor menjadi file baru.
+4. Membuat page_mywatchlist.dart untuk bagian halaman mywatchlist yang berisi semua mywatchlist.
+5. Membuat navigasi dari setiap judul watch list ke halaman detail
+   Membuat detail_mywatchlist.dart untuk bagian halaman detail untuk setiap mywatchlist yang ada pada daftar tersebut. Halaman ini menampilkan judul, release date, rating, review, dan status (sudah ditonton/belum).
+6. Membuat tombol back untuk kembali ke daftar mywatchlist.
+
